@@ -1,4 +1,4 @@
-FROM python:3.11-slim
+FROM registry.cn-hangzhou.aliyuncs.com/library/python:3.11-slim
 
 WORKDIR /app
 
@@ -12,4 +12,6 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-CMD ["uvicorn", "src.main:app", "--host", "0.0.0.0", "--port", "8000"]
+ENV PYTHONPATH=/app/src:$PYTHONPATH
+
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000", "--app-dir", "/app/src"]
