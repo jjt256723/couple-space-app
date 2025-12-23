@@ -4,9 +4,9 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import select
 from typing import Annotated
 
-from src.core.database import get_db
-from src.core.security import decode_access_token
-from src.models import User
+from core.database import get_db
+from core.security import decode_access_token
+from models import User
 
 security = HTTPBearer()
 

@@ -4,9 +4,9 @@ from sqlalchemy import select
 from typing import Dict, Set
 import json
 
-from src.core.database import get_db
-from src.models import User, Room
-from src.core.security import decode_access_token
+from core.database import get_db
+from models import User, Room
+from core.security import decode_access_token
 
 
 class ConnectionManager:

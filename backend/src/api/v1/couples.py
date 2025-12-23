@@ -3,14 +3,14 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import select
 from typing import List
 
-from src.core.database import get_db
-from src.core.security import create_access_token
-from src.models import User, Room, Couple
-from src.schemas.user import UserResponse
-from src.schemas.couple import CoupleCreate, CoupleResponse, CoupleBind
+from core.database import get_db
+from core.security import create_access_token
+from models import User, Room, Couple
+from schemas.user import UserResponse
+from schemas.couple import CoupleCreate, CoupleResponse, CoupleBind
 import secrets
 from datetime import datetime
-from src.api.dependencies import UserIdDep
+from api.dependencies import UserIdDep
 
 router = APIRouter(prefix="/couples", tags=["couples"])
 

@@ -3,10 +3,10 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import select, desc
 from typing import List
 
-from src.core.database import get_db
-from src.models import User, Photo
-from src.schemas.photo import PhotoCreate, PhotoResponse
-from src.api.dependencies import UserIdDep
+from core.database import get_db
+from models import User, Photo
+from schemas.photo import PhotoCreate, PhotoResponse
+from api.dependencies import UserIdDep
 
 router = APIRouter(prefix="/photos", tags=["photos"])
 

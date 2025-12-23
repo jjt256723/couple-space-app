@@ -4,10 +4,10 @@ from sqlalchemy import select, desc
 from typing import List
 from datetime import datetime
 
-from src.core.database import get_db
-from src.models import User, Diary
-from src.schemas.diary import DiaryCreate, DiaryUpdate, DiaryResponse
-from src.api.dependencies import UserIdDep
+from core.database import get_db
+from models import User, Diary
+from schemas.diary import DiaryCreate, DiaryUpdate, DiaryResponse
+from api.dependencies import UserIdDep
 
 router = APIRouter(prefix="/diaries", tags=["diaries"])
 

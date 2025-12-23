@@ -4,10 +4,10 @@ from sqlalchemy import select, desc
 from typing import List
 from datetime import datetime
 
-from src.core.database import get_db
-from src.models import User, Todo
-from src.schemas.todo import TodoCreate, TodoUpdate, TodoResponse
-from src.api.dependencies import UserIdDep
+from core.database import get_db
+from models import User, Todo
+from schemas.todo import TodoCreate, TodoUpdate, TodoResponse
+from api.dependencies import UserIdDep
 
 router = APIRouter(prefix="/todos", tags=["todos"])
 

@@ -3,10 +3,10 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import select, desc
 from typing import List
 
-from src.core.database import get_db
-from src.models import User, Message, Room
-from src.schemas.message import MessageCreate, MessageResponse
-from src.api.dependencies import UserIdDep
+from core.database import get_db
+from models import User, Message, Room
+from schemas.message import MessageCreate, MessageResponse
+from api.dependencies import UserIdDep
 
 router = APIRouter(prefix="/messages", tags=["messages"])
 

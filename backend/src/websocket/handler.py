@@ -3,10 +3,10 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import select
 import json
 
-from src.core.database import get_db
-from src.models import User, Room, Message
-from src.websocket.manager import manager, get_current_user_ws
-from src.schemas.message import MessageCreate, MessageResponse
+from core.database import get_db
+from models import User, Room, Message
+from websocket.manager import manager, get_current_user_ws
+from schemas.message import MessageCreate, MessageResponse
 from datetime import datetime
 
 router = APIRouter()
